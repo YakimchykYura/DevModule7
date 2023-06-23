@@ -12,7 +12,7 @@ public class HttpStatusImageDownloader {
     public void downloadStatusImage(int code) throws IOException {
         String url = new HttpStatusChecker().getStatusImage(code);
         try(InputStream in = new URL(url).openStream()) {
-            String path = "D:\\Soft\\idea produckt\\JavaDevModule7\\src\\main\\java\\org\\example" + code + ".jpg";
+            String path = "src/main/java/org/example" + code + ".jpg";
             if (!new File(path).exists()) {
                 Files.copy(in, Paths.get(path));
             } else {
