@@ -7,11 +7,13 @@ public class HttpImageStatusCli {
     public void askStatus() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter HTTP status code");
-        int code;
-        while (!scanner.hasNextInt() || (code = scanner.nextInt()) <= 0) {
+
+        while (!scanner.hasNextInt()) {
             scanner.nextLine();
             System.out.print("Please enter valid number! \n");
         }
+
+        int code = scanner.nextInt();
         new HttpStatusImageDownloader().downloadStatusImage(code);
     }
 

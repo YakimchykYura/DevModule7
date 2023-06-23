@@ -8,7 +8,7 @@ public class Test {
 //        System.out.println(checker);
 //        HttpStatusImageDownloader downloader = new HttpStatusImageDownloader();
 //        downloader.downloadStatusImage(404);
-//        HttpImageStatusCli cli = new HttpImageStatusCli();
-//        cli.askStatus();
+        HttpImageStatusCli cli = new HttpImageStatusCli();
+        cli.askStatus();
     }
 }
